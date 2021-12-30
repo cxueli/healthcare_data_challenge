@@ -2287,7 +2287,16 @@ lab_result_3
 
   <script src="./index_files/head.min.js.download"></script>
   <script src="./index_files/reveal.js.download"></script>
-
+  <script src="plugin/chalkboard/plugin.js"></script>
+  <script src="plugin/customcontrols/plugin.js"></script>
+  
+  <script>
+    Reveal.initialize({
+        // ...
+        plugins: [ RevealChalkboard, RevealCustomControls ],
+        // ...
+    });
+  </script>
 
   <script>
 
@@ -2347,7 +2356,7 @@ lab_result_3
           toggleNotesButton: false,
           theme: 'whiteboard',
         },
-
+ 
         keyboard: {
           67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
           66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
